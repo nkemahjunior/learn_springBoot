@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class FootballCoach implements Coach{
 
     public FootballCoach() {
-        System.out.println("in the football coach class");
+        //System.out.println("in the football coach class");
     }
 
     @Override

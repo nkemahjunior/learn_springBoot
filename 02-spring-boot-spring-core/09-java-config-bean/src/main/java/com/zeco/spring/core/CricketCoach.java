@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class CricketCoach implements  Coach{
 
     public CricketCoach() {
-        System.out.println("in the cricket coach class");
+        //System.out.println("in the cricket coach class");
     }
 
     @Override

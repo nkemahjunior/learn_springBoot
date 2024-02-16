@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements  Coach{
 
     public TennisCoach() {
-        System.out.println("in the tennis coach class");
+        //System.out.println("in the tennis coach class");
     }
 
     @Override
