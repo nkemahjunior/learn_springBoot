@@ -1,6 +1,7 @@
 package com.zeco.crudDemo.dao;
 
 import com.zeco.crudDemo.entity.Instructor;
+import com.zeco.crudDemo.entity.InstructorDetail;
 
 public interface AppDao {
 
@@ -10,5 +11,7 @@ public interface AppDao {
 
     void deleteInstructorById(int theId);
 
-    
+    InstructorDetail findInstructorDetailById(int theId);
+
+    void deleteInstructorDetailById(int theId);
 }

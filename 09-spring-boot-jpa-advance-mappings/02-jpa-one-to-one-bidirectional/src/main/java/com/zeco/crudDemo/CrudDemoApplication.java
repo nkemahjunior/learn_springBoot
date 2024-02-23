@@ -21,8 +21,36 @@ public class CrudDemoApplication {
 		return  runner -> {
 			//createInstructor(appDao);
 			//findInstructor(appDao);
-			deleteInstructor(appDao);
+			//deleteInstructor(appDao);
+
+			//findInstructorDetail(appDao);
+			deleteInstructorDetail(appDao);
 		};
+	}
+
+	private void deleteInstructorDetail(AppDao appDAO) {
+
+		int theId = 3;
+		System.out.println("Deleting instructor detail id: " + theId);
+
+		appDAO.deleteInstructorDetailById(theId);
+
+		System.out.println("Done!");
+	}
+
+	private void findInstructorDetail(AppDao appDAO) {
+
+		// get the instructor detail object
+		int theId = 2;
+		InstructorDetail tempInstructorDetail = appDAO.findInstructorDetailById(theId);
+
+		// print the instructor detail
+		System.out.println("tempInstructorDetail: " + tempInstructorDetail);
+
+		// print the associated instructor
+		System.out.println("the associated instructor: " + tempInstructorDetail.getInstructor());
+
+		System.out.println("Done!");
 	}
 
 	private void deleteInstructor(AppDao appDAO) {
@@ -51,17 +79,17 @@ public class CrudDemoApplication {
 	private void createInstructor(AppDao appDAO) {
 
 
-		  Instructor  tempInstructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
+		 /*** Instructor  tempInstructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
 
 		// create the instructor detail
 		InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.luv2code.com/youtube","Luv 2 code!!!");
+		**/
 
-
-		/*** create the instructor
+		// create the instructor
 		Instructor tempInstructor = new Instructor("Madhu", "Patel", "madhu@luv2code.com");
 
 		// create the instructor detail
-		InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.luv2code.com/youtube", "Guitar");**/
+		InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.luv2code.com/youtube", "Guitar");
 
 		// associate the objects
 		tempInstructor.setInstructorDetail(tempInstructorDetail);
